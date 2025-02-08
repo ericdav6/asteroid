@@ -33,6 +33,9 @@ def main():
         updatable.update(dt)
         for item in drawable:
             item.draw(screen)
+        for asts in asteriod:
+            if asts.collision(character):
+                running = False
         pygame.display.flip()
         dt = clock.tick(60)/1000
 
