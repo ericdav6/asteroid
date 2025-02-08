@@ -39,6 +39,10 @@ def main():
         for asts in asteriod:
             if asts.collision(character):
                 running = False
+            for shot in shots:
+                if asts.collision(shot):
+                    asts.split()
+                    shot.kill()
         pygame.display.flip()
         dt = clock.tick(60)/1000
 
