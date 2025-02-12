@@ -24,16 +24,20 @@ def main():
 
     field = AsteroidField()
     character = Player(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
+    img = pygame.image.load("/Users/ericdavoodi/repos/pythonrepos/asteroid/spaceback.jpeg")
+
 
     
 
 
     while running:
+       
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
         screen.fill("black")
         updatable.update(dt)
+        screen.blit(img, (0, 0))
         for item in drawable:
             item.draw(screen)
         for asts in asteriod:
