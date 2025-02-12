@@ -27,11 +27,7 @@ def main():
     img = pygame.image.load("/Users/ericdavoodi/repos/pythonrepos/asteroid/spaceback.jpeg")
 
 
-    
-
-
     while running:
-       
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
